@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if showonce %}
+	<h1>{{selfdefinestr}}</h1>
+{%else %}
+	
+       {%  for astr in range(3) %}
+		<h1>{{selfdefinestr}}</h1>
+       {% endfor %}
+{%endif %}
+</body>
+</html>
