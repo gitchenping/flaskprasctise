@@ -1,11 +1,20 @@
-from project import app
+from project import *
 
-from flask import request  
+  
 
 from flask import make_response
 
-@app.route('/') 
-def index(): 
+
+app= create_app('default')
+
+
+@app.route('/')
+def index():
+    return '<h1>hello flask!</h1>'
+
+
+@app.route('/request') 
+def rquest_index(): 
     user_agent = request.headers.get('User-Agent') 
     return '<p>Your browser is %s</p>' % user_agent
 
@@ -29,6 +38,7 @@ def respage():
 
 #from project.admin.view import adminmodule_blueprint
 #app.register_blueprint(adminmodule_blueprint,url_prefix='/admin')
+
 
 if __name__=='__main__':
     app.run(host='0.0.0.0',debug=True)

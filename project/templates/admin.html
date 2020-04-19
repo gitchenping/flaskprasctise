@@ -1,7 +1,16 @@
 {% extends "bootstrap/base.html" %} 
 {% import "bootstrap/wtf.html" as wtf %} 
  
-{% block title %}Flasky{% endblock %} 
+
+
+{% block head %}
+	{{ super() }}
+	<title>Flask</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/static/css/login.css" rel="stylesheet">
+{% endblock %}
+
+ 
  
 {% block navbar %} 
 <div class="navbar navbar-inverse" role="navigation"> 
